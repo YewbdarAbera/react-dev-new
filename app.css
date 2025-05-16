@@ -1,11 +1,14 @@
 .header{
   display:flex;
-  border:1px sold black;
+  border:1px solid black;
   justify-content: space-between;
 
 }
 img{
   width:200px
+}
+.res-img{
+  padding:2px
 }
 .nav-container > ul {
   display: flex;
@@ -26,10 +29,15 @@ flex-wrap: wrap;
 .resturnat{
   margin: 10px;
   width: 200px;
-  height: 300px;
   background-color: #f0f0f0;
 
 }
 .res-img{
   width: 190px;
+}
+/* .logo-container{
+  width: 200px;
+} */
+.logo{
+  width: 100px;
 }

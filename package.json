@@ -20,11 +20,12 @@
   },
   "homepage": "https://github.com/YewbdarAbera/react-dev-new#readme",
   "devDependencies": {
-    "parcel": "^2.14.4"
+    "parcel": "^2.15.0"
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.0"
   },
   "browserslist": [
     "last 2 version"
