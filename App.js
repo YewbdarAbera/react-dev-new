@@ -6,6 +6,7 @@ import About from "./About"
 import Header from "./Header"
 import ErrorComp from "./ErrorComp"
 import { createBrowserRouter , RouterProvider , Outlet } from "react-router-dom";
+import ResturnatMenu from "./ResturnatMenu";
 
 // YoniYoeyea@@@1
 
@@ -28,11 +29,14 @@ const router = createBrowserRouter([
                 path: '/home',
                 element:<Body/>
         },{
-            path: '/Contact',
+            path: '/contact',
             element:<Contact/>
     },{
-        path: '/About',
+        path: '/about',
         element:<About/>
+            }, {
+                path: '/resturant/:restId',
+                element:<ResturnatMenu/>
 }
         ],
         errorElement:<ErrorComp/>
