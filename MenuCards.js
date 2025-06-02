@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import {ImageURL} from './constant'
+import {ImageURL} from './utils/constant'
 const MenuCards = ({ data }) => {
     // const {name} = data
     // let  datas

@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import MenuCards from './MenuCards'
-import { DATA_URL } from './constant'
+import { DATA_URL } from './utils/constant'
 import { useParams } from 'react-router-dom'
 const ResturnatMenu = () => {
     const [data, setData] = useState()
