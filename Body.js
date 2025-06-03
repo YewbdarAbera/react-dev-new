@@ -1,11 +1,12 @@
 import ResturantCard from "./ResturantCard"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-
+import useOnlineStatus from './utils/useOnlineStatus'
 const Body = () => {
     const [resturantList, setResturantList] = useState([])
     const [filteredResturantList, setfilteredResturantList] = useState([])
-    const [serchKey, setSerchKey]=useState()
+    const [serchKey, setSerchKey] = useState()
+    const onlineStatus = useOnlineStatus()
     const fetchData = async() => {
         try {
             let response = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING')
@@ -25,7 +26,9 @@ const Body = () => {
         setfilteredResturantList(filteredRes)
         
     }
-    return (
+    if(onlineStatus === false) return <h1>you are offline , please check your network connection  </h1>
+    return (<>
+
         <section className='body'>
             <div className="search">
                 <input type="text" value={serchKey}
@@ -37,6 +40,7 @@ const Body = () => {
                 
             </div>
         </section>
+        </>
     )
 }
 export default Body
